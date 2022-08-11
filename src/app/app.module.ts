@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { ScalePickerComponent } from './scale_picker/scale_picker.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
-  imports: [BrowserModule],
+  declarations: [AppComponent, HeaderComponent, ScalePickerComponent],
+  imports: [BrowserModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })
