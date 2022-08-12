@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './scale_picker.component.html',
   styleUrls: ['./scale_picker.component.css'],
 })
-export class ScalePickerComponent {}
+export class ScalePickerComponent {
+  notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+}
