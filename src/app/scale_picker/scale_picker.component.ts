@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class ScalePickerComponent {
   notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
   types = ['\u266E', '\u266F', '\u266D'];
-  currentNoteValue = '';
-  currentTypeValue = '';
+  scaleTypes = ['Major', 'Minor'];
+  currentNoteValue = 'C';
+  currentTypeValue = '\u266E';
+  currentScaleValue = 'Major';
 }

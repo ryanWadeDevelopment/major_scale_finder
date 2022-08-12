@@ -2,8 +2,10 @@
   <div class="row">
     <div class="col-md-3">Please select a note:</div>
     <div class="col-md-3">Please select note type:</div>
-    <div class="col-md-6">
-      Root Note: {{ currentNoteValue + " " + currentTypeValue }}
+    <div class="col-md-3">Please select scale type:</div>
+    <div class="col-md-3">
+      Scale:
+      {{ currentNoteValue + " " + currentTypeValue + " " + currentScaleValue }}
     </div>
   </div>
 
@@ -41,11 +43,33 @@
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
           <button
+            class="note-types"
             (click)="currentTypeValue = type"
             ngbDropdownItem
             *ngFor="let type of types"
           >
             {{ type }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div id="dropDown" ngbDropdown class="d-inline-block">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          Scale Types
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button
+            (click)="currentScaleValue = scale"
+            ngbDropdownItem
+            *ngFor="let scale of scaleTypes"
+          >
+            {{ scale }}
           </button>
         </div>
       </div>
