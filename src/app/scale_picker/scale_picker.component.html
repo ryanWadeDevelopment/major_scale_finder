@@ -1,10 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col">Please select a note:</div>
+    <div class="col-md-3">Please select a note:</div>
+    <div class="col-md-3">Please select note type:</div>
+    <div class="col-md-6">
+      Root Note: {{ currentNoteValue + " " + currentTypeValue }}
+    </div>
   </div>
+
   <div class="row">
-    <div class="col">
-      <div ngbDropdown class="d-inline-block">
+    <div class="col-md-3">
+      <div id="dropDown" ngbDropdown class="d-inline-block">
         <button
           type="button"
           class="btn btn-outline-primary"
@@ -14,7 +19,34 @@
           Notes
         </button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button ngbDropdownItem *ngFor="let note of notes">{{ note }}</button>
+          <button
+            (click)="currentNoteValue = note"
+            ngbDropdownItem
+            *ngFor="let note of notes"
+          >
+            {{ note }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div ngbDropdown class="d-inline-block">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          Types
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button
+            (click)="currentTypeValue = type"
+            ngbDropdownItem
+            *ngFor="let type of types"
+          >
+            {{ type }}
+          </button>
         </div>
       </div>
     </div>
