@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MajorScale } from '../shared/MajorScale.Model';
 import { NgModule } from '@angular/core';
+import { ScalePickerComponent } from '../scale_picker/scale_picker.component';
 
 @Component({
   selector: 'app-scale-display',

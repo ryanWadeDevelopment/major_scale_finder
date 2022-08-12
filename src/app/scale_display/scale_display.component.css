@@ -1,8 +1,12 @@
 ul li {
   display: inline;
-  font-size: 20px;
-  margin-right: 5px;
+  font-size: 16px;
+  margin-right: 8px;
 }
 ul {
-  margin-top: 20px;
+  margin-top: 16px;
+}
+
+button {
+  margin-top: 8px;
 }
