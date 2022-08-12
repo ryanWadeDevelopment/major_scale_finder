@@ -1,15 +1,11 @@
 <div class="container">
+  <div (click)="getMajorScale()" class="row">Test</div>
   <div class="row">
     <div class="col-md-10">
       <ul>
-        <li>Notes in Scale:</li>
-        <li>{{ CScale.note1 }}</li>
-        <li>{{ CScale.note2 }}</li>
-        <li>{{ CScale.note3 }}</li>
-        <li>{{ CScale.note4 }}</li>
-        <li>{{ CScale.note5 }}</li>
-        <li>{{ CScale.note6 }}</li>
-        <li>{{ CScale.note7 }}</li>
+        <li *ngFor="let scale of newScale">
+          {{ scale }}
+        </li>
       </ul>
     </div>
   </div>
