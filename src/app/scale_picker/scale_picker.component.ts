@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ScalePickerComponent {
   notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
-  types = ['Whole', 'Sharp', 'Flat'];
+  types = ['\u266E', '\u266F', '\u266D'];
   currentNoteValue = '';
   currentTypeValue = '';
 }
