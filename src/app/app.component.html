@@ -1,9 +1,14 @@
 <div class="container">
   <div class="row">
+    <div class="col-xs-12">Test Row: {{ currentNoteValue }}</div>
+  </div>
+  <div class="row">
     <div class="col-md-10">
       <app-header></app-header>
-      <app-scale-picker></app-scale-picker>
-      <app-scale-display></app-scale-display>
+      <app-scale-picker
+        (childToParent)="childToParent($event)"
+      ></app-scale-picker>
+      <app-scale-display [childToMaster]="currentNoteValue"></app-scale-display>
     </div>
   </div>
 </div>

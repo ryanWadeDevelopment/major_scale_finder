@@ -25,6 +25,7 @@
             (click)="currentNoteValue = note"
             ngbDropdownItem
             *ngFor="let note of notes"
+            (click)="sendToParent(note)"
           >
             {{ note }}
           </button>

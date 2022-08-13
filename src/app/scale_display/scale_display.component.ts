@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MajorScale } from '../shared/MajorScale.Model';
 import { NgModule } from '@angular/core';
 import { ScalePickerComponent } from '../scale_picker/scale_picker.component';
@@ -26,6 +26,8 @@ export class ScaleDisplayComponent {
     'B',
   ];
 
+  @Input('childToMaster')
+  currentNote: string = '';
   MajorScale = new MajorScale(
     this.newScale[0],
     this.newScale[1],
@@ -37,10 +39,11 @@ export class ScaleDisplayComponent {
   );
 
   getMajorScale() {
-    const indexNote = this.notesWithSharps.indexOf('G');
+    const indexNote = this.notesWithSharps.indexOf(this.currentNote);
     const firstHalf = this.notesWithSharps.slice(indexNote);
     const secondHalf = this.notesWithSharps.slice(0, indexNote);
     const newArray = firstHalf.concat(secondHalf);
+    this.newScale = [];
     this.newScale.push(newArray[0]);
     this.newScale.push(newArray[2]),
       this.newScale.push(newArray[4]),
